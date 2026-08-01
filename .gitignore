@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+coverage/
+
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local Git safety configuration used only by this workspace
+.git-safeconfig
