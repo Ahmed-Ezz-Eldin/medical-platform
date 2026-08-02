@@ -1,0 +1,31 @@
+{
+  "brand": "Medical Platform",
+  "header": {
+    "switchToDark": "Dark",
+    "switchToLight": "Light",
+    "toggleTheme": "Toggle color theme",
+    "toggleLanguage": "Switch language"
+  },
+  "auth": {
+    "loginTitle": "Sign in",
+    "registerTitle": "Create account",
+    "loginHint": "Use your trusted device to access your courses.",
+    "registerHint": "Create an account, then sign in to bind your device.",
+    "name": "Full name",
+    "email": "Email address",
+    "password": "Password",
+    "passwordHint": "At least 10 characters",
+    "loginButton": "Secure sign in",
+    "registerButton": "Create account",
+    "loading": "Submitting...",
+    "noAccount": "New here?",
+    "hasAccount": "Already have an account?",
+    "registerLink": "Create an account",
+    "loginLink": "Sign in",
+    "formError": "Please check the entered information.",
+    "registrationDone": "Account created. Sign in now from your first device.",
+    "loginDone": "Signed in successfully.",
+    "deviceBlocked": "This account is blocked after a login attempt from another device. Ask an admin for a reset.",
+    "genericError": "Something went wrong. Try again."
+  }
+}

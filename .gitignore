@@ -9,6 +9,7 @@ node_modules/
 # Build output
 dist/
 coverage/
+.pnpm-store/
 
 # Local editor and operating-system files
 .DS_Store
@@ -17,3 +18,4 @@ Thumbs.db
 
 # Local Git safety configuration used only by this workspace
 .git-safeconfig
+.pnpm-store/
