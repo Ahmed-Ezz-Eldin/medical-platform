@@ -1,0 +1,31 @@
+{
+  "brand": "Medical Platform",
+  "header": {
+    "switchToDark": "داكن",
+    "switchToLight": "فاتح",
+    "toggleTheme": "تبديل الوضع",
+    "toggleLanguage": "تبديل اللغة"
+  },
+  "auth": {
+    "loginTitle": "تسجيل الدخول",
+    "registerTitle": "إنشاء حساب",
+    "loginHint": "استخدم جهازك المعتمد للوصول إلى كورساتك.",
+    "registerHint": "أنشئ حسابك ثم سجّل الدخول لربط جهازك.",
+    "name": "الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "passwordHint": "10 أحرف على الأقل",
+    "loginButton": "دخول آمن",
+    "registerButton": "إنشاء الحساب",
+    "loading": "جارٍ الإرسال...",
+    "noAccount": "ليس لديك حساب؟",
+    "hasAccount": "لديك حساب بالفعل؟",
+    "registerLink": "أنشئ حسابًا",
+    "loginLink": "سجّل الدخول",
+    "formError": "راجع البيانات المدخلة ثم حاول مرة أخرى.",
+    "registrationDone": "تم إنشاء الحساب. سجّل الدخول الآن من جهازك الأول.",
+    "loginDone": "تم تسجيل الدخول بنجاح.",
+    "deviceBlocked": "تم حظر الحساب بسبب محاولة دخول من جهاز مختلف. اطلب Reset من الأدمن.",
+    "genericError": "حدث خطأ. حاول مرة أخرى."
+  }
+}
