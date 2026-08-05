@@ -44,5 +44,8 @@ userSchema.methods.comparePassword = function comparePassword(candidatePassword)
   return bcrypt.compare(candidatePassword, this.password)
 }
 
+// هذا الفهرس يسرّع ترتيب وفصل الحسابات حسب الحالة في صفحة إدارة المستخدمين.
+userSchema.index({ accountStatus: 1, createdAt: -1 })
+
 // نصدر الـ Model لاستخدامه في Routes التسجيل والدخول والإدارة.
 module.exports = mongoose.model('User', userSchema)

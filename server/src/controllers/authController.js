@@ -69,7 +69,6 @@ async function login(request, response, next) {
   try {
     // نقرأ بيانات الدخول ومعرف الجهاز من Header مخصص.
     const { email, password } = request.body
-    const deviceId = getDeviceId(request)
     const normalizedEmail = typeof email === 'string' ? email.trim().toLowerCase() : ''
 
     // نستخدم رسالة عامة حتى لا نكشف إن كان البريد مسجلًا أم لا.
@@ -87,6 +86,16 @@ async function login(request, response, next) {
     if (user.accountStatus === 'blocked') {
       throw createRequestError('This account is blocked. Contact support to reset the trusted device.', 403, 'ACCOUNT_BLOCKED')
     }
+
+    // سياسة الجهاز الواحد تخص حسابات الطلاب فقط؛ الأدمن لا يُربط بجهاز واحد حتى لا يحظر نفسه عند الإدارة من جهاز آخر.
+    if (user.role === 'admin') {
+      await logSecurityEvent(request, user, 'login_success')
+      setAuthCookie(response, user)
+      return response.status(200).json({ message: 'Login successful.', user: publicUser(user) })
+    }
+
+    // لا نطلب بصمة الجهاز إلا من المستخدم العادي الخاضع لسياسة الجهاز الواحد.
+    const deviceId = getDeviceId(request)
 
     // نحول معرف الجهاز إلى hash قبل مقارنته أو تخزينه.
     const deviceHash = hashDeviceId(deviceId)
